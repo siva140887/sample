@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.8.2 <0.9.0;
+
+// set, retrieve, change the contract owner (contract deployer)
+
+contract Deployer
+{
+    address private deployer;
+
+    constructor()
+    {
+        deployer = msg.sender;  //0x5b3....
+    }
+
+    function changeDeployer(address newdeployer) public 
+    {
+        // only the current owner is allowed to invoke this function
+        require(msg.sender==deployer,"The caller is not a deployer");   // require(condition, message in case of condition being false);
+        deployer = newdeployer;
+    }
+
+
+}
