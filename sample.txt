@@ -2,7 +2,7 @@
 
 pragma solidity >=0.8.2 <0.9.0;
 
-// set, retrieve, change the contract owner (contract deployer)
+// set, retrieve, change the contract owner (contract deployer) gfygyfggyfg
 
 contract Deployer
 {
